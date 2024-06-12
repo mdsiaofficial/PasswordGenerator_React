@@ -45,7 +45,10 @@ export default function PassGen() {
           placeholder="Password"
           readOnly
         />
-        <button className="bg-[crimson] text-white py-2 px-4 rounded-md">Copy</button>
+        <button
+          className="bg-[crimson] hover:bg-red-400 text-white py-2 px-4 rounded-md"
+          onClick={() => navigator.clipboard.writeText(pass)}
+        >Copy</button>
         <div className="flex gap-3">
           <label >Include Characters</label>
           <input
